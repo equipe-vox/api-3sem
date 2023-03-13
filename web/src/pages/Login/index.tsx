@@ -1,7 +1,6 @@
 import { Button } from "../../components";
-import styles from "./styles.module.css";
 
-export function Login() {
+export const Login = () => {
 
   const styles = {
     linear: {
@@ -18,7 +17,7 @@ export function Login() {
         </div>
 
         <div className="md:mx-14 mx-3 w-screen h-2/4 flex flex-col justify-start">
-          <h1 className="mt-10 mb-4 text-3xl text-blue font-body font-semibold">Entre para</h1>
+          <h1 className="mt-10 mb-2 text-3xl text-blue font-body font-semibold">Entre para</h1>
           <h1 className="text-xl text-text-color font-body">Visualizar clientes, cadastrar</h1>
           <h1 className="mt-1 text-xl text-text-color font-body">vendas e mais!</h1>
           <h1 className="mt-14 text-xs text-text-color font-body">Não possui uma conta ainda? Contate o</h1>
@@ -33,8 +32,21 @@ export function Login() {
           <div className="mt-10">
             <input className="w-full p-3 bg-input-color rounded-xl text-text-color" type="password" placeholder="Digite sua senha"/>
           </div>
+          <div className="mt-4 flex">
+            <label>
+              <input type="checkbox"></input>
+              <label className="text-white ml-2" id="check">Lembrar de mim</label>
+            </label>
+          </div>
           <div className="mt-10">
-            <button className="w-full p-3 bg-blue text-white rounded-xl font-semibold" placeholder="example@gmail.com">ENTRAR</button>
+            <button className="w-full p-3 bg-blue flex items-center justify-center text-white rounded-xl font-semibold" placeholder="example@gmail.com">
+              <span className="mr-2">
+                ENTRAR
+              </span>
+              <span className="material-symbols-outlined">
+                login
+              </span>
+            </button>
           </div>
         </div>
       </div>
